@@ -1,0 +1,9 @@
+D:\CafeManagement\Database_Layer\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\CafeManagement\Database_Layer\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\CafeManagement\Database_Layer\bin\Debug\Database.dll
+D:\CafeManagement\Database_Layer\bin\Debug\Database.pdb
+D:\CafeManagement\Database_Layer\obj\Debug\Database.dll
+D:\CafeManagement\Database_Layer\obj\Debug\Database.pdb
+D:\CafeManagement\Database_Layer\bin\Debug\System.Data.SqlClient.dll
+D:\CafeManagement\Database_Layer\bin\Debug\System.Data.SqlClient.xml
+D:\CafeManagement\Database_Layer\obj\Debug\DAL.csproj.CopyComplete

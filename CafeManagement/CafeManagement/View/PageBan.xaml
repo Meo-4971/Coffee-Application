@@ -1,0 +1,83 @@
+﻿<UserControl x:Class="CafeMVVM.Views.PageBan"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CafeMVVM.ViewModels"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="600"     
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}">
+    <UserControl.DataContext>
+        <local:BanViewModels></local:BanViewModels>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto" ></RowDefinition>
+        </Grid.RowDefinitions>
+        <materialDesign:ColorZone Mode="Accent">
+            <Label Height="20"></Label>
+        </materialDesign:ColorZone>
+        <DataGrid Margin="5,5,5,5" Grid.Row="1" IsReadOnly="True"  ItemsSource="{Binding BanDanhMuc,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedBan,Mode=OneWayToSource}" AutoGenerateColumns="False">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Style.Triggers>
+                        <Trigger Property="DataGridCell.IsSelected" Value="True">
+                            <Setter Property="Background" Value="Yellow" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Tên bàn" Width="*">
+                    <DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                            <Setter Property="FontFamily" Value="Segoe UI"></Setter>
+                            <Setter Property="FontSize" Value="15"></Setter>
+                            <Setter Property="FontWeight" Value="Bold"></Setter>
+                            <Setter Property="Foreground" Value="Blue"></Setter>
+                        </Style>
+                    </DataGridTemplateColumn.HeaderStyle>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label HorizontalContentAlignment="Center" FontSize="15" FontFamily="Segoe UI"  Foreground="Black" Content="{Binding TENBAN}" ></Label>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                </Grid.RowDefinitions>
+                <ComboBox Margin="5,5,5,5" ItemsSource="{Binding KhuVuc}" DisplayMemberPath="TENKHUVUC" SelectedItem="{Binding SelectedKhuVuc,Mode=OneWayToSource,UpdateSourceTrigger=PropertyChanged}" FontSize="15" FontFamily="Segoe UI" FontWeight="Bold" VerticalAlignment="Bottom" materialDesign:HintAssist.Hint="Chọn khục vực để thêm bàn" Grid.Row="0"></ComboBox>
+                <TextBox  Margin="5,5,5,5" Text="{Binding SOLUONGBAN,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="TextBox_PreviewTextInput"  FontSize="15" FontFamily="Segoe UI" FontWeight="Bold" VerticalAlignment="Bottom" materialDesign:HintAssist.Hint="Nhập số lượng bàn cần thêm" Grid.Row="1"></TextBox>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Command="{Binding ThemBanComand}" FontSize="15" FontFamily="Segoe UI" FontWeight="Bold" Foreground="Black" Content="Thêm" Style="{StaticResource MaterialDesignRaisedAccentButton}" Margin="5,5,5,5" Grid.Column="0"></Button>
+                <Button Command="{Binding SuaBanComand}"  FontSize="15" FontFamily="Segoe UI" FontWeight="Bold" Foreground="Black" Content="Sửa" Style="{StaticResource MaterialDesignRaisedAccentButton}" Margin="5,5,5,5" Grid.Column="1"></Button>
+                <Button Command="{Binding XoaBanComand}" FontSize="15" FontFamily="Segoe UI" FontWeight="Bold" Foreground="Black" Content="Xóa" Style="{StaticResource MaterialDesignRaisedAccentButton}" Margin="5,5,5,5" Grid.Column="2"></Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,9 @@
+D:\CafeManagement\BUS\bin\Release\BUS.dll
+D:\CafeManagement\BUS\bin\Release\BUS.pdb
+D:\CafeManagement\BUS\bin\Release\Database.dll
+D:\CafeManagement\BUS\bin\Release\Database.pdb
+D:\CafeManagement\BUS\obj\Release\BUS.csproj.AssemblyReference.cache
+D:\CafeManagement\BUS\obj\Release\BUS.csproj.CoreCompileInputs.cache
+D:\CafeManagement\BUS\obj\Release\BUS.csproj.CopyComplete
+D:\CafeManagement\BUS\obj\Release\BUS.dll
+D:\CafeManagement\BUS\obj\Release\BUS.pdb

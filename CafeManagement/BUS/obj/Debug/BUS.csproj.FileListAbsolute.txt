@@ -1,0 +1,11 @@
+D:\CafeManagement\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\CafeManagement\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\CafeManagement\BUS\bin\Debug\BUS.dll
+D:\CafeManagement\BUS\bin\Debug\BUS.pdb
+D:\CafeManagement\BUS\bin\Debug\Database.dll
+D:\CafeManagement\BUS\bin\Debug\System.Data.SqlClient.dll
+D:\CafeManagement\BUS\bin\Debug\Database.pdb
+D:\CafeManagement\BUS\bin\Debug\System.Data.SqlClient.xml
+D:\CafeManagement\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\CafeManagement\BUS\obj\Debug\BUS.dll
+D:\CafeManagement\BUS\obj\Debug\BUS.pdb

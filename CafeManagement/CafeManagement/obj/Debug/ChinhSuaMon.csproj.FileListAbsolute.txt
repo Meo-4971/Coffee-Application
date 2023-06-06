@@ -1,0 +1,43 @@
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\bin\Debug\ChinhSuaMon.exe.config
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\bin\Debug\ChinhSuaMon.exe
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\bin\Debug\ChinhSuaMon.pdb
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.csproj.AssemblyReference.cache
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.Form1.resources
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.Properties.Resources.resources
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.csproj.GenerateResource.cache
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.csproj.CoreCompileInputs.cache
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.exe
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.pdb
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.Form2.resources
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.Form3.resources
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\bin\Debug\System.Windows.Forms.Ribbon.dll
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.Form4.resources
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.csproj.CopyComplete
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.Form5.resources
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.Form6.resources
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.Form7.resources
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.Form8.resources
+D:\Thenng's Semeter\Sem3\HKI\DBMS\Project\Form\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.SaleOrder.resources
+D:\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.csproj.AssemblyReference.cache
+D:\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.csproj.SuggestedBindingRedirects.cache
+D:\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.exe
+D:\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.pdb
+D:\ChinhSuaMon\ChinhSuaMon\bin\Debug\ChinhSuaMon.exe.config
+D:\ChinhSuaMon\ChinhSuaMon\bin\Debug\ChinhSuaMon.exe
+D:\ChinhSuaMon\ChinhSuaMon\bin\Debug\ChinhSuaMon.pdb
+D:\ChinhSuaMon\ChinhSuaMon\bin\Debug\System.Windows.Forms.Ribbon.dll
+D:\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.DangKyKhachHangThanThiet.resources
+D:\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.QuanLyHoaDon.resources
+D:\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.QuanLyMon.resources
+D:\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.DangNhap.resources
+D:\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.ChucNangQuanLy.resources
+D:\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.QuanLyDanhMuc.resources
+D:\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.QuanLyKhachHang.resources
+D:\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.Properties.Resources.resources
+D:\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.QuanLyNhanVien.resources
+D:\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.SaleOrder.resources
+D:\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.ThongKe.resources
+D:\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.TrangChu.resources
+D:\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.csproj.GenerateResource.cache
+D:\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.csproj.CoreCompileInputs.cache
+D:\ChinhSuaMon\ChinhSuaMon\obj\Debug\ChinhSuaMon.csproj.CopyComplete

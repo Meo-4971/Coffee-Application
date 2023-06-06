@@ -1,0 +1,6 @@
+D:\CafeManagement\Database_Layer\bin\Release\Database.dll
+D:\CafeManagement\Database_Layer\bin\Release\Database.pdb
+D:\CafeManagement\Database_Layer\obj\Release\DAL.csproj.AssemblyReference.cache
+D:\CafeManagement\Database_Layer\obj\Release\DAL.csproj.CoreCompileInputs.cache
+D:\CafeManagement\Database_Layer\obj\Release\Database.dll
+D:\CafeManagement\Database_Layer\obj\Release\Database.pdb

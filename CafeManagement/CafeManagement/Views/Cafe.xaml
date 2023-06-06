@@ -1,0 +1,86 @@
+﻿<Window x:Class="CafeMVVM.Views.Cafe"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CafeMVVM.ViewModels"
+        xmlns:pageTransitions="clr-namespace:WpfPageTransitions;assembly=WpfPageTransitions"
+        mc:Ignorable="d" Closing="Window_Closing"
+        Title="Cafe" Height="640" Width="1200" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" 
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush x:Name="igridnen" Stretch="Fill"></ImageBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Button IsEnabled="False" ToolTip="Dành cho nhân viên phục vụ" Style="{StaticResource MaterialDesignRaisedDarkButton}" x:Name="btnphucvu" Click="btnphucvu_Click" Margin="5,10,0,5" HorizontalAlignment="Left" Height="60" Width="160">
+                <StackPanel Orientation="Horizontal">
+                    <Image x:Name="hinhphucvu" HorizontalAlignment="Left" Stretch="Fill" Width="30" Height="30" ></Image>
+                    <Label Content="  PHỤC VỤ" FontFamily="Segoe UI" FontSize="15" HorizontalAlignment="Center" Foreground="White" Margin="0,0,0,0" FontWeight="Bold" VerticalAlignment="Center" Grid.Column="1"></Label>
+                </StackPanel>
+            </Button>
+            <Button IsEnabled="False" x:Name="btnkhuvuc" Click="btnkhuvuc_Click" ToolTip="Thêm khu vực cho quán" Style="{StaticResource MaterialDesignRaisedDarkButton}"  Margin="5,0,0,5" HorizontalAlignment="Left" Height="60" Width="160">
+                <StackPanel Orientation="Horizontal">
+                    <Image x:Name="hinhkhuvuc" HorizontalAlignment="Left" Stretch="Fill" Width="30" Height="30" ></Image>
+                    <Label  Content="   KHU VỰC" FontFamily="Segoe UI" FontSize="15" HorizontalAlignment="Center" Foreground="White" Margin="0,0,0,0" FontWeight="Bold" VerticalAlignment="Center" Grid.Column="1"></Label>
+                </StackPanel>
+            </Button>
+            <Button  IsEnabled="False" x:Name="btnban" Click="btnban_Click" ToolTip="Thêm bàn cho khu vực" Style="{StaticResource MaterialDesignRaisedDarkButton}"  Margin="5,0,0,5" HorizontalAlignment="Left" Height="60" Width="160">
+                <StackPanel Orientation="Horizontal">
+                    <Image x:Name="hinhban" HorizontalAlignment="Left" Stretch="Fill" Width="30" Height="30" ></Image>
+                    <Label Content="BÀN            " FontFamily="Segoe UI" FontSize="15" HorizontalAlignment="Center" Foreground="White" Margin="0,0,0,0" FontWeight="Bold" VerticalAlignment="Center" Grid.Column="1"></Label>
+                </StackPanel>
+            </Button>
+            <Button IsEnabled="False"  x:Name="btnthucdon" Click="btnthucdon_Click" ToolTip="Thêm danh mục và món" Style="{StaticResource MaterialDesignRaisedDarkButton}"  Margin="5,0,0,5" HorizontalAlignment="Left" Height="60" Width="160">
+                <StackPanel Orientation="Horizontal">
+                    <Image x:Name="hinhthucdon" HorizontalAlignment="Left" Stretch="Fill" Width="30" Height="30" ></Image>
+                    <Label Content="THỰC ĐƠN" FontFamily="Segoe UI" FontSize="15" HorizontalAlignment="Center" Foreground="White" Margin="0,0,0,0" FontWeight="Bold" VerticalAlignment="Center" Grid.Column="1"></Label>
+                </StackPanel>
+            </Button>
+            <Button IsEnabled="False" x:Name="btngiamgia" Click="btngiamgia_Click" ToolTip="GIẢM GIÁ" Style="{StaticResource MaterialDesignRaisedDarkButton}"  Margin="5,0,0,5" HorizontalAlignment="Left" Height="60" Width="160">
+                <StackPanel Orientation="Horizontal">
+                    <Image x:Name="hinhgiamgia" HorizontalAlignment="Left" Stretch="Fill" Width="30" Height="30" ></Image>
+                    <Label Content="GIẢM GIÁ  " FontFamily="Segoe UI" FontSize="15" HorizontalAlignment="Center" Foreground="White" Margin="0,0,0,0" FontWeight="Bold" VerticalAlignment="Center" Grid.Column="1"></Label>
+                </StackPanel>
+            </Button>
+            <Button IsEnabled="False" x:Name="btnthongke" Click="btnthongke_Click" ToolTip="Thống kê danh thu" Style="{StaticResource MaterialDesignRaisedDarkButton}"  Margin="5,0,0,5" HorizontalAlignment="Left" Height="60" Width="160">
+                <StackPanel Orientation="Horizontal">
+                    <Image x:Name="hinhthongke" HorizontalAlignment="Left" Stretch="Fill" Width="30" Height="30" ></Image>
+                    <Label Content="THỐNG KÊ" FontFamily="Segoe UI" FontSize="15" HorizontalAlignment="Center" Foreground="White" Margin="0,0,0,0" FontWeight="Bold" VerticalAlignment="Center" Grid.Column="1"></Label>
+                </StackPanel>
+            </Button>
+            <Button IsEnabled="False" x:Name="btntaikhoan" Click="btntaikhoan_Click" ToolTip="Quản lý tài khoản"  Style="{StaticResource MaterialDesignRaisedDarkButton}"  Margin="5,0,0,5" HorizontalAlignment="Left" Height="60" Width="160">
+                <StackPanel Orientation="Horizontal">
+                    <Image x:Name="hinhtaikhoan" HorizontalAlignment="Left" Stretch="Fill" Width="30" Height="30" ></Image>
+                    <Label Content="TÀI KHOẢN" FontFamily="Segoe UI" FontSize="15" HorizontalAlignment="Center" Foreground="White" Margin="0,0,0,0" FontWeight="Bold" VerticalAlignment="Center" Grid.Column="1"></Label>
+                </StackPanel>
+            </Button>
+            <Button IsEnabled="False" x:Name="btndangxuat" Click="btndangxuat_Click"  ToolTip="Đăng xuất"  Style="{StaticResource MaterialDesignRaisedDarkButton}"  Margin="5,0,0,5" HorizontalAlignment="Left" Height="60" Width="160">
+                <StackPanel Orientation="Horizontal">
+                    <Image x:Name="hinhdangxuat" HorizontalAlignment="Left" Stretch="Fill" Width="30" Height="30" ></Image>
+                    <Label Content="ĐĂNG XUẤT" FontFamily="Segoe UI" FontSize="15" HorizontalAlignment="Center" Foreground="White" Margin="0,0,0,0" FontWeight="Bold" VerticalAlignment="Center" Grid.Column="1"></Label>
+                </StackPanel>
+            </Button>
+            <Button IsEnabled="False" ToolTip="Tắt chương trình" x:Name="btnthoat" Click="btnthoat_Click" Style="{StaticResource MaterialDesignRaisedDarkButton}"  Margin="5,0,0,5" HorizontalAlignment="Left" Height="60" Width="160">
+                <StackPanel Orientation="Horizontal">
+                    <Image x:Name="hinhthoat" HorizontalAlignment="Left" Stretch="Fill" Width="30" Height="30" ></Image>
+                    <Label Content="THOÁT       " FontFamily="Segoe UI" FontSize="15" HorizontalAlignment="Center" Foreground="White" Margin="0,0,0,0" FontWeight="Bold" VerticalAlignment="Center" Grid.Column="1"></Label>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <Grid  Grid.Column="1">
+            <pageTransitions:PageTransition Name="pageTransitionControl" Margin="15" TransitionType="SlideAndFade" />
+        </Grid>
+    </Grid>
+</Window>

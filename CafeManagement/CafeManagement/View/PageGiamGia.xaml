@@ -1,0 +1,115 @@
+﻿<UserControl x:Class="CafeMVVM.Views.PageGiamGia"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CafeMVVM.ViewModels"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="600"     
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}">
+    <UserControl.DataContext>
+        <local:KhuVucBanViewModels></local:KhuVucBanViewModels>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <materialDesign:ColorZone  Mode="Accent">
+            <Label Height="20"></Label>
+        </materialDesign:ColorZone>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ComboBox ItemsSource="{Binding DanhMucThucDon}" SelectedItem="{Binding SelectedItemDMThucDonGiamGia,Mode=OneWayToSource}" DisplayMemberPath="TENDM" FontFamily="Segoe UI" FontSize="15" Foreground="Black" FontWeight="Bold" HorizontalContentAlignment="Center" Margin="5,5,5,5" Grid.Row="0" materialDesign:HintAssist.Hint="Chọn danh mục thực đơn cần giảm giá"></ComboBox>
+            <DataGrid IsReadOnly="True" ItemsSource="{Binding ThucDon,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding ChonThucDonBanGiamGia,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" Margin="5,5,5,5" Grid.Row="1">
+                <DataGrid.Resources>
+                    <Style TargetType="{x:Type DataGridCell}">
+                        <Style.Triggers>
+                            <Trigger Property="DataGridCell.IsSelected" Value="True">
+                                <Setter Property="Background" Value="Yellow" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="Tên món" Width="*">
+                        <DataGridTemplateColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                                <Setter Property="FontFamily" Value="Segoe UI"></Setter>
+                                <Setter Property="FontSize" Value="15"></Setter>
+                                <Setter Property="FontWeight" Value="Bold"></Setter>
+                                <Setter Property="Foreground" Value="Blue"></Setter>
+                            </Style>
+                        </DataGridTemplateColumn.HeaderStyle>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Label FontFamily="Segoe UI" FontSize="15" Foreground="Black" Content="{Binding TENTHUCDON}" HorizontalContentAlignment="Center"></Label>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Đơn giá" Width="*">
+                        <DataGridTemplateColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                                <Setter Property="FontFamily" Value="Segoe UI"></Setter>
+                                <Setter Property="FontSize" Value="15"></Setter>
+                                <Setter Property="FontWeight" Value="Bold"></Setter>
+                                <Setter Property="Foreground" Value="Blue"></Setter>
+                            </Style>
+                        </DataGridTemplateColumn.HeaderStyle>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Label FontFamily="Segoe UI" FontSize="15" Foreground="Black" Content="{Binding DONGIA}" HorizontalContentAlignment="Center"></Label>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Giảm giá (%)" Width="*">
+                        <DataGridTemplateColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                                <Setter Property="FontFamily" Value="Segoe UI"></Setter>
+                                <Setter Property="FontSize" Value="15"></Setter>
+                                <Setter Property="FontWeight" Value="Bold"></Setter>
+                                <Setter Property="Foreground" Value="Blue"></Setter>
+                            </Style>
+                        </DataGridTemplateColumn.HeaderStyle>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Label FontFamily="Segoe UI" FontSize="15" Foreground="Black" Content="{Binding GIAMGIA}" HorizontalContentAlignment="Center"></Label>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Grid Margin="5,5,5,5" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label FontFamily="Segoe UI" FontSize="15" Foreground="Black" Content="Nhập số % cần giảm:"></Label>
+                <TextBox Text="{Binding PhanTramGiamGia,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center" FontFamily="Segoe UI" FontSize="15" Foreground="Black" Grid.Column="1" PreviewTextInput="TextBox_PreviewTextInput"></TextBox>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Command="{Binding ThemGiamGia}" Style="{StaticResource MaterialDesignRaisedAccentButton}" FontFamily="Segoe UI" FontSize="15" Foreground="Black" FontWeight="Bold" Content="Cập nhật" Margin="5,5,5,5" Grid.Column="0"></Button>
+                <Button  Command="{Binding GoGiamGia}" Style="{StaticResource MaterialDesignRaisedAccentButton}" FontFamily="Segoe UI" FontSize="15" Foreground="Black" FontWeight="Bold" Content="Gỡ bỏ" Margin="5,5,5,5" Grid.Column="1"></Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

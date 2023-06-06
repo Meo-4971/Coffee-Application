@@ -1,0 +1,57 @@
+﻿<Window x:Class="CafeMVVM.Views.PageChuyenBan"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CafeMVVM.ViewModels"
+      mc:Ignorable="d" 
+      Height="130" Width="500" WindowStartupLocation="CenterScreen" WindowStyle="None" 
+      x:Name="WChuyenBan" ResizeMode="NoResize"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}">
+    <Window.DataContext>
+        <local:KhuVucBanViewModels></local:KhuVucBanViewModels>
+    </Window.DataContext>
+    <Grid Background="#b8b894">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Margin="5,5,5,5" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label HorizontalContentAlignment="Center" FontFamily="Segoe UI" FontSize="15" FontWeight="Bold" Foreground="Blue" Content="Chọn bàn cần chuyển"></Label>
+                <ComboBox ItemsSource="{Binding BanCoNguoi,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedBanCoNguoi,Mode=OneWayToSource}" DisplayMemberPath="TENBAN" Grid.Row="1" materialDesign:HintAssist.Hint="Chọn bàn"></ComboBox>
+            </Grid>
+            <Grid Margin="5,5,5,5" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label HorizontalContentAlignment="Center" FontFamily="Segoe UI" FontSize="15" FontWeight="Bold" Foreground="Blue" Content="Bàn còn trống"></Label>
+                <ComboBox ItemsSource="{Binding BanTrong,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedBanTrong,Mode=OneWayToSource}" DisplayMemberPath="TENBAN" Grid.Row="1" materialDesign:HintAssist.Hint="Chọn bàn"></ComboBox>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Command="{Binding XacNhanChuyenBanIcommand}" CommandParameter="{Binding ElementName=WChuyenBan}" FontFamily="Segoe UI" FontSize="15" FontWeight="Bold" Foreground="Black" Content="Chuyển" Style="{StaticResource MaterialDesignRaisedAccentButton}" Margin="5,5,5,5" Grid.Column="0"></Button>
+            <Button x:Name="btnthoat" Click="btnthoat_Click" FontFamily="Segoe UI" FontSize="15" FontWeight="Bold" Foreground="Black" Content="Thoát" Style="{StaticResource MaterialDesignRaisedAccentButton}" Margin="5,5,5,5" Grid.Column="1"></Button>
+        </Grid>
+    </Grid>
+</Window>
